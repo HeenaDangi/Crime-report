@@ -1,0 +1,159 @@
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Crime_report.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+
+        body{
+            background-image:url('cs.png');
+            background-repeat:no-repeat;
+           
+        }
+        img
+        {
+            width:100%;
+        }
+        .auto-style1 {
+            text-align: center;
+            color: #FFFFCC;
+            font-family:lato;
+            text-shadow:1px 1px 2px Yellow , 0 0 1em Yellow , 0 0 0.2em yellow;
+            font-size: xx-large;
+        }
+
+        ul{
+            list-style-type:none;
+            margin:0px;
+            padding:10px;
+            overflow:hidden;
+            background-color:lightgoldenrodyellow;
+            display:inline-block;
+            float:left;
+            width:100%;
+            margin-top:10px;
+            justify-content:flex-start;
+        }
+
+        li{
+            margin:0px;
+            float:left;
+            text-align:center;
+            height:10px;
+            padding:30px;
+        }
+
+        li a.dropdownbtn{
+            display:inline-block;
+            color:mediumpurple;
+            padding:14px 25px;
+            height:10px;
+            width:100px;
+        }
+
+        .dropdownbtn{
+            border:none;
+            font-size:medium;
+            padding:25px 75px;
+            font-size:16px;
+            cursor:pointer;
+            text-align:inherit;
+        }
+
+        .dropdown{
+            display:inline-block;
+        }
+
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            min-width:150px;
+            min-height:100px;
+            box-shadow:0px 8px 16px 0px;
+            z-index:1;
+        }
+
+        .dropdown-content a{
+            padding:12px 16px;
+            text-decoration:none;
+            display:block;
+            text-align:left;
+            color:darkred;
+        }
+
+        .dropdown:hover .dropdown-content{
+            display:block;
+            background-color:palegoldenrod;
+            color:purple;
+        }
+        li,ul{
+            padding-right:80px;
+            padding-left:80px;
+            display:flex;
+            
+        }
+        .auto-style2 {
+            text-align: center;
+        }
+        </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+               
+<body>
+<form id="form1" runat="server">
+        
+            <h1 class="auto-style1" style="background-color: #800000">ONLINE CRIME REPORTING</h1>
+            
+
+    <div style="margin:30px">
+            <ul>
+                <li>
+                    <a href="Home.aspx">HOME</a>
+                </li>
+          
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdownbtn" style="margin-top:0px;padding:0px">ADD NEW</a>
+                    <div class="dropdown-content">
+                         <a href="NewCase.aspx" tabindex="16" >NEW CASE</a>
+                         <a href="NewCriminal.aspx" tabindex="16" >NEW CRIMINAL</a>
+                         <a href="NewCrime.aspx" tabindex="16" >NEW CRIME</a>
+                    </div>
+                </li>
+          
+           
+    <li>
+        <a href="SearchCase.aspx" tabindex="16">SEARCHCASE</a>
+    </li>
+
+
+      
+    <li>
+        <a href="AllCases.aspx" tabindex="16">ALLCASES</a>
+    </li>
+
+
+   
+    <li>
+        <a href="LogOut.aspx" tabindex="16">LOGOUT</a>
+    </li>
+</ul>
+ </div>
+ 
+      <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+          <div class="auto-style2">
+              &nbsp;</div>
+  </asp:ContentPlaceHolder>
+          
+        
+    </form>
+         
+</body>
+</html>
+    
+    
